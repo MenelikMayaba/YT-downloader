@@ -1,5 +1,4 @@
 from pytube import YouTube
-from pytube import YouTube
 
 def main():
     """
@@ -21,7 +20,7 @@ def main():
             print("Goodbye")
             break
 
-        definition = input(f"What definition would you like?\nPlease choose from {options}: ").strip().lower()
+        definition = input(f"What definition would you like?\nPlease choose from {options}: ").strip()
 
         try:
             yt = YouTube(url)
