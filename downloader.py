@@ -1,5 +1,6 @@
 from pytube import YouTube
 
+
 def main():
     """
     Main function to download YouTube videos based on user input.
@@ -11,7 +12,7 @@ def main():
     continues until the user inputs 'exit' to quit. Handles exceptions and
     provides error messages for invalid inputs or download issues.
     """
-    options = ["audio", "resolution", "hd", "hd"]
+    options = ["audio", "resolution", "HD", "LD"]
 
     while True:
         url = input("Please paste the URL of the video or 'exit' to quit: ").strip()
@@ -20,7 +21,7 @@ def main():
             print("Goodbye")
             break
 
-        definition = input(f"What definition would you like?\nPlease choose from 1.{options[0]}\n 2.{options[1]}\n 3.{options[2]}\n 4.{options[3]}: ").strip()
+        definition = input(f"What definition would you like?\nPlease choose from\n 1.{options[0]}\n 2.{options[1]}\n 3.{options[2]}\n 4.{options[3]}\n: ").strip()
 
         try:
             yt = YouTube(url)
