@@ -1,6 +1,6 @@
 from yt_dlp import YoutubeDL
 
-def download(url):
+def download(url:str):
 
     with YoutubeDL() as ytd:
         ytd.download(url)
@@ -13,7 +13,7 @@ def main():
 
             url = input("enter the link of the video you wnat to downlaod: ")
             history = []
-            if "https" not in url:
+            if "https" or "www" not in url:
                 raise ValueError("please insert a correct url link")
     
     
